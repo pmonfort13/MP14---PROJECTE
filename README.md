@@ -5,7 +5,7 @@
 ## PREPARACIÓ
 
 - [Anàlisi de riscos](#anàlisi-de-riscos)
-- Contracte simbòlic i delimitació de l’abast
+- [Contracte simbòlic i delimitació de l’abast](#doc-pla-director-de-seguretat)
 
 ## FASE RECONEIXEMENT
 
@@ -29,10 +29,9 @@
 ## LANDING PAGE
 
 
+---
 
-
-
-
+---
 
 # Anàlisi de Riscos
 
@@ -54,5 +53,10 @@ Aquest document definirà els registres, prioritats i classificacions de les ini
 
 [Enllaç al document d'anàlisi de riscos](https://docs.google.com/spreadsheets/d/176OdSnzK3n5jHQtwUypUWkya4u1JjleQEpcceXBVcrw/edit#gid=0)
 
+---
 
+# Doc. Pla Director De Seguretat
 
+- No 
+
+---
