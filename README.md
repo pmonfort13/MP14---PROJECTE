@@ -142,3 +142,43 @@ Per últim ens demana si volem guardar el resultat al fitxer ‘inf.txt’
 ![foto](../fotos/image17.jpg)
 
 ## Més OSINT -- INFOGA:
+
+![foto](../fotos/image18.jpg)
+
+![foto](../fotos/image19.jpg)
+
+![foto](../fotos/image20.jpg)
+
+![foto](../fotos/image21.jpg)
+
+![foto](../fotos/image22.jpg)
+
+---
+
+# AUDITORIA DE SERVEIS
+## Escanneig
+
+Dintre aquest apartat, ens demanen crear una funció per realitzar un escaneig amb l’eina nmap.Aquesta funció, té com objectiu ajudar a descobrir els hosts disponibles de la xarxa, els ports oberts que te cada host, llistar les versions d’un o més ports d'algun host i llistar les vulnerabilitats d’un o més serveis.
+
+Per elaborar aquesta part, tenim una funció que contingui el codi a executar:
+
+![foto](../fotos/image23.jpg)
+
+Dintre d’aquesta, implementarem un While que permet seleccionar entre diverses opcions al usuari.També farem un print per mostrar per pantalla les funcions disponibles i com executar-les:
+
+![foto](../fotos/image24.jpg)
+
+Finalment, creem una variable ‘env’ com a input per demanar a l'usuari que fiqui un número dintre el rang indicat per seleccionar una de les opcions indicades.Per correspondre  el input, utilitzem if i elif per importar i executar el mòdul seleccionat:
+
+![foto](../fotos/image25.jpg)
+
+#### En aquest cas, l’eina d’escanneig disposa de 4 funcions:
+
+- Xarxa():
+Dintre, crearem la funció guardar_informacio_fitxer(informacio) per desar el resultat de l'execució al fitxer ‘inf.txt’:
+
+![foto](../fotos/image26.jpg)
+
+Crearem un altra funció anomenada xarxa() amb un input per preguntar la xarxa que vulgui l’usuari (específicant com ho ha de posar).Amb la IP introduïda, s’executa “nmap -sP” sobre la IP de xarxa ficada i acte seguit es captura la sortida:
+
+![foto](../fotos/image27.jpg)
