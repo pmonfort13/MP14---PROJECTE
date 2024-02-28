@@ -182,3 +182,7 @@ Dintre, crearem la funció guardar_informacio_fitxer(informacio) per desar el re
 Crearem un altra funció anomenada xarxa() amb un input per preguntar la xarxa que vulgui l’usuari (específicant com ho ha de posar).Amb la IP introduïda, s’executa “nmap -sP” sobre la IP de xarxa ficada i acte seguit es captura la sortida:
 
 ![foto](../fotos/image27.jpg)
+
+Finalment, assignem la variable “lineas” on separarem la sortida i preguntarem si vol guardar aquesta informació.En cas de que fiqui “si”, cridarem a la funció “guardar_informació_fitxer” per guardar el resultat obtingut:
+
+![foto](../fotos/image28.jpg)
