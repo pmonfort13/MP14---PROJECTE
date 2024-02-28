@@ -4,7 +4,7 @@
 
 ## PREPARACIÓ
 
-- Anàlisi de riscos
+- [Anàlisi de riscos](#anàlisi-de-riscos)
 - Contracte simbòlic i delimitació de l’abast
 
 ## FASE RECONEIXEMENT
@@ -27,6 +27,11 @@
 ## PLA DE MILLORA
 
 ## LANDING PAGE
+
+
+
+
+
 
 
 # Anàlisi de Riscos
