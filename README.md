@@ -114,3 +114,31 @@ Després d’imprimir-lo per pantalla, el guardem a la llista per després retor
 ![foto](../fotos/image10.jpg)
 
 ## The Harvester
+
+L’escript de The Harvester esta format per una funció principal the_harvester_script() juntament amb el de guardar_informacio():
+
+![foto](../fotos/image11.jpg)
+
+![foto](../fotos/image12.jpg)
+
+El primer que fa la funció és cridar l’eina TheHarvester amb el parametre “-h” per mostrar l’ajuda i veure els parametres que li podem passar:
+
+![foto](../fotos/image13.jpg)
+
+Seguidament ens demana amb 3 inputs, primer el domini o adreça sobre el que executar, font d’on volem que es bfaigue la busqueda i per últim opcions extra que volem que s’executin amb l’escript:
+
+![foto](../fotos/image14.jpg)
+
+Un cop tenim els paràmetres guardats en variables executem l’eina, aquesta vegada amb els paràmetres que hem guardat i desant el resultat a la variable “harvest”:
+
+![foto](../fotos/image15.jpg)
+
+Formata la sortida de la variable i fa un print per veure el resultat de l’escaneig:
+
+![foto](../fotos/image16.jpg)
+
+Per últim ens demana si volem guardar el resultat al fitxer ‘inf.txt’
+
+![foto](../fotos/image17.jpg)
+
+## Més OSINT -- INFOGA:
