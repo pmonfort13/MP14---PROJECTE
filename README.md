@@ -246,3 +246,68 @@ Finalment, preguntem si vol guardar la informació i cridem a la funció guardar
 ---
 
 ## SSH Audit
+
+- Dintre l’apartat de ssh, ens demana implementar l’eina ‘ssh-audit’ al nostre arsenal d'auditoria.Per lo que ens dirigim al seu link de descarga a github i ens baixem ssh-audit:
+
+![foto](../fotos/image38.jpg)
+
+[**REPOSITORI DE L'EINA**](https://github.com/jtesta/ssh-audit)
+
+Un cop baixat, el descomprimim i l’enviem a la ruta del projecte:
+
+![foto](../fotos/image39.jpg)
+
+![foto](../fotos/image40.jpg)
+
+Un cop dintre el projecte, ens interessa el seu executable ‘ssh-audit.py’:
+
+![foto](../fotos/image41.jpg)
+
+A l’apartat d'escanneig, afegim una entrada per ssh-audit i creem un nou document de python per la implementació de l’eina:
+
+![foto](../fotos/image42.jpg)
+
+![foto](../fotos/image43.jpg)
+
+![foto](../fotos/image44.jpg)
+
+Dintre ‘sshaudit.py’, primer creem la funcio ‘guardar_informacio(info)’ per desar la informació al fitxer ‘inf.txt’:
+
+![foto](../fotos/image45.jpg)
+
+Creem la funció sshaudit(), dintre demanem la IP a l'usuari i executem l’eina ssh-audit.py indicant la ruta on esta guardat sobre la IP introduïda.Després, guardem el resultat a la variable ‘output’, separat per linies: 
+
+![foto](../fotos/image46.jpg)
+
+Finalment, fem un print per mostrar el resultat per pantalla i preguntem si es desitja guardar el resultat cridant a la funció definida anteriorment guardar_informacion(output):
+
+![foto](../fotos/image47.jpg)
+
+---
+
+## Enumeració
+
+- L'eina d'enummeració que hem utilitzat el Enum4Linux, la qual s'instal·La amb snap, però en el moment de crear el docker ens va donar errors ja que no funciona amb snap i enlloc d'aquesta eina, hem utilitzat un repositori de github anomenat "enum4linux-ng" descarregant-lo i executant-lo amb python.
+
+L'esript consta d'una funció principal "enum4linux_tool()" de la qual penjen  dos funcions:
+La primera "print_enum4linux()" és on fem un print de l'ajuda de l'eina i mostrem tots els paràmetres que se li poden passar a l'eina
+
+![foto](../fotos/image48.jpg)
+
+La segona funció "run_enum4linux()" és la que s'encarrega de 
+
+![foto](../fotos/image49.jpg)
+
+
+
+![foto](../fotos/image50.jpg)
+
+
+
+![foto](../fotos/image51.jpg)
+
+
+
+![foto](../fotos/image52.jpg)
+
+
