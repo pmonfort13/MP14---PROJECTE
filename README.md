@@ -294,20 +294,76 @@ La primera "print_enum4linux()" és on fem un print de l'ajuda de l'eina i mostr
 
 ![foto](../fotos/image48.jpg)
 
-La segona funció "run_enum4linux()" és la que s'encarrega de 
+La segona funció "run_enum4linux()" és la que s'encarrega d'executar l'eina amb els parametres que el client li ha passat i retorna el resultat per pantalla i també el guarda a un document
 
 ![foto](../fotos/image49.jpg)
 
-
+El primer que fa és executar l'eina amb els parametres IP i OPTIONS que se li han passat a la funció i guarda el resultat en una variable "linias" on s'ha formatat el resultat en linies
 
 ![foto](../fotos/image50.jpg)
 
-
+Després fa un print del resltat i ens pregunta si volem guardar-lo en un fitxer de resultats de l'eina
 
 ![foto](../fotos/image51.jpg)
 
-
+Al final de l'script hi ha dos inputs on es demana a l'usuari, un amb l'adreça sobre la que executar l'eina i l'altre amb les opcions extra que li volem passar juntament amb algun exemple, i se li passen a la funció
 
 ![foto](../fotos/image52.jpg)
 
+---
 
+# FUNCIONALITATS AFEGIDES:
+
+## Bot de Telegram
+
+- Per implementar un bot de Telegram que pugui enviar els resultats a un xat de telegram, el primer pas serà crear el bot.
+
+Per fer-ho accedim a telegram i al buscador, busquem ‘Father Bot’:
+
+![foto](../fotos/image53.jpg)
+
+Ara, parlarem en Bot Father i indiquem que volem crear un nou bot amb la sentència ‘/New Bot’:
+
+![foto](../fotos/image54.jpg)
+
+Ens demana escollir un nom per al nostre bot, en aquest cas ‘M14_PAU_GUILEM’:
+
+![foto](../fotos/image55.jpg)
+
+Després de escollir el nom, ens demana escollir un nom d’usuari per al bot i ens demana que acabi en ‘.bot’, en el nostre cas és ‘M14_PAU_GUILLEM_bot’:
+
+![foto](../fotos/image56.jpg)
+
+Dintre escaneig.py, definim la funció enviarTelegram(), dintre definim 3 variables:  token del bot, id_grup, ruta de l'arxiu on es desen els resultats:
+
+![foto](../fotos/image57.jpg)
+
+Definim un missatge a enviar i definim l'URL per enviar un missatge de text al grup de Telegram usant el mètode 'sendMessage'.Utilitzem el token del bot, l'ID del grup, el missatge i especifiquem que el format del text és HTML:
+
+![foto](../fotos/image58.jpg)
+
+Definim l'URL per enviar un document al grup de Telegram usant el mètode 'sendDocument'.Adjuntem el fitxer especificat per la ruta 'ruta1' i proporcionem l'ID del grup i un peu de foto ('caption').El fitxer s'obre en mode binari ('rb') abans de ser adjuntat a la sol·licitud:
+
+![foto](../fotos/image59.jpg)
+
+---
+
+## Contenidor Docker
+
+- Se'ns demanava crear un contenidor docker on instal·lar la nostra eina d'escaneig amb tots els escripts i aplicacions per poder fer l'eina portatil
+
+Per crear un contenedor docker per la nostra eina d’escanneig, creem un nou document  amb el nom de Dockerfile:
+
+![foto](../fotos/image60.jpg)
+
+Dintre, aquest, ens descarguem python, les dependències d’aquest i snapd:
+
+![foto](../fotos/image61.jpg)
+
+Creem el directori de treball de docker, copiem el contingut dintre el docer generat i ens descarguem les dependències del projecte:
+
+![foto](../fotos/image62.jpg)
+
+Indiquem les ordres a executar per crear el docker:
+
+![foto](../fotos/image63.jpg)
