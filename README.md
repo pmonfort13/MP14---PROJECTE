@@ -2,31 +2,31 @@
 # MP14-PROJECTE
 # INDEX
 
-## PREPARACIÓ
+- ## PREPARACIÓ
 
-- [Anàlisi de riscos](#anàlisi-de-riscos)
-- [Contracte simbòlic i delimitació de l’abast](#doc-pla-director-de-seguretat)
+  - [Anàlisi de riscos](#anàlisi-de-riscos)
+  - [Contracte simbòlic i delimitació de l’abast](#doc-pla-director-de-seguretat)
 
-## FASE RECONEIXEMENT
+- ## FASE RECONEIXEMENT
 
-- Consulta API Shodan amb Python
-- The Harvester Python
-- Més OSINT
+  - Consulta API Shodan amb Python
+  - The Harvester Python
+  - Més OSINT
 
-## AUDITORIA DE SERVEIS
+- ## AUDITORIA DE SERVEIS
 
-- Escaneig
-- SSH
-- Enumeració
+  - Escaneig
+  - SSH
+  - Enumeració
+  
+- ## FUNCIONALITATS AFEGIDES
 
-## FUNCIONALITATS AFEGIDES
+  - Bot Telegram amb Python
+  - Crear un contenidor Docker
 
-- Bot Telegram amb Python
-- Crear un contenidor Docker
+- ## PLA DE MILLORA
 
-## PLA DE MILLORA
-
-## LANDING PAGE
+- ## LANDING PAGE
 
 
 ---
@@ -125,7 +125,7 @@ El primer que fa la funció és cridar l’eina TheHarvester amb el parametre �
 
 ![foto](../fotos/image13.jpg)
 
-Seguidament ens demana amb 3 inputs, primer el domini o adreça sobre el que executar, font d’on volem que es bfaigue la busqueda i per últim opcions extra que volem que s’executin amb l’escript:
+Seguidament ens demana amb 3 inputs, primer el domini o adreça sobre el que executar, font d’on volem que es faigue la busqueda i per últim opcions extra que volem que s’executin amb l’escript:
 
 ![foto](../fotos/image14.jpg)
 
@@ -143,13 +143,27 @@ Per últim ens demana si volem guardar el resultat al fitxer ‘inf.txt’
 
 ## Més OSINT -- INFOGA:
 
+Com a eina extra de OSINT hem decidit utilitzar *INFOGA*, una eina per recopilar informació de comptes de correu electrònic de diferents fonts públiques (motors de cerca, servidors de claus PGP). 
+És una eina senzilla, però molt efectiva per a les primeres etapes d'una prova de penetració o simplement per conèixer la visibilitat de la vostra empresa a Internet.
+
+- L'script d'infoga consta d'una funció principal "infoga_script()" la qual conté tota la execució del programa amb les diferents opcions, formata la sortida i la guarda i un altra funció que és la de guardar el resultat en un document:
+
 ![foto](../fotos/image18.jpg)
+
+La funció comença amb la execució amb l'eina subprocess de la comanda "infoga -h" per mostrar com s'utilitza l'eina i els diferents paràmetres i fa uns prints amb unes capçaleres de l'eina:
 
 ![foto](../fotos/image19.jpg)
 
+Seguidament ens demana amb 3 inputs, primer el domini o adreça sobre el que executar la eina, font d’on volem que es faigue la busqueda i per últim opcions extra que volem que s’executin amb l’escript.
+Després executa la comanda amb els parametres que li hem passat:
+
 ![foto](../fotos/image20.jpg)
 
+Guardem el resultat de la comanda en una variable "infoga_output" i fem un printper a que es mostri el resultat per pantalla:
+
 ![foto](../fotos/image21.jpg)
+
+Per últim ens pregunta si volem guardar el resultat en un fitxer i en cas positiu, utilitza la funció "guardar_informacio()" per desar-ho al document _inf.txt_ 
 
 ![foto](../fotos/image22.jpg)
 
@@ -174,7 +188,7 @@ Finalment, creem una variable ‘env’ com a input per demanar a l'usuari que f
 
 #### En aquest cas, l’eina d’escanneig disposa de 4 funcions:
 
-- Xarxa():
+- ##### Xarxa():
 Dintre, crearem la funció guardar_informacio_fitxer(informacio) per desar el resultat de l'execució al fitxer ‘inf.txt’:
 
 ![foto](../fotos/image26.jpg)
@@ -186,3 +200,49 @@ Crearem un altra funció anomenada xarxa() amb un input per preguntar la xarxa q
 Finalment, assignem la variable “lineas” on separarem la sortida i preguntarem si vol guardar aquesta informació.En cas de que fiqui “si”, cridarem a la funció “guardar_informació_fitxer” per guardar el resultat obtingut:
 
 ![foto](../fotos/image28.jpg)
+
+- ##### Ports():
+
+Importem els mòduls necessaris i definim de nou la funció per guardar la informació al fitxer “inf.txt”:
+
+![foto](../fotos/image29.jpg)
+
+ Definim la funció de ports(), dintre preguntarem la IP a l’usuari i executem “nmap -p-” sobre la IP.Després, es guarda el resultat separat per linies a la variable “lineas”:
+
+![foto](../fotos/image30.jpg)
+
+Finalment, podem mostrar el resultat per pantalla i preguntar si vol guardar el resultat cridant la funció definida anteriorment:
+
+![foto](../fotos/image31.jpg)
+
+- ##### Versions():
+
+Imortem els mòduls requerits  i definim de nou la funció per guardar la informació al fitxer “inf.txt”:
+
+![foto](../fotos/image32.jpg)
+
+Definim la funció versions(), dintre preguntem la IP i el port o rang de ports per executar “nmap -sV -p” sobre la IP i els ports.Després guardem el resultat separat per linies a la variable “lineas”:
+
+![foto](../fotos/image33.jpg)
+
+Finalment, preguntem si vol guardar el resultat i cridem a la funció guardar_informacio(lineas) definida anteriorment:
+
+![foto](../fotos/image34.jpg)
+
+- ##### Vuln():
+
+Imortem els mòduls requerits  i definim de nou la funció per guardar la informació al fitxer “inf.txt”:
+
+![foto](../fotos/image35.jpg)
+
+Definim la funció vuln(), dintre demanem una IP i els ports a escanejar per executar “nmap -sV -p port –script=vuln” i guardar el resultat a la variable “lineas”, separat per línies:
+
+![foto](../fotos/image36.jpg)
+
+Finalment, preguntem si vol guardar la informació i cridem a la funció guardar_informacio(lineas) definida anteriorment:
+
+![foto](../fotos/image37.jpg)
+
+---
+
+## SSH Audit
