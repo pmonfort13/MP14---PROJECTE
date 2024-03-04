@@ -9,20 +9,20 @@
 
 - ## FASE RECONEIXEMENT
 
-  - Consulta API Shodan amb Python
-  - The Harvester Python
-  - Més OSINT
+  - [Consulta API Shodan amb Python](#eina-api-de-shodan)
+  - [The Harvester Python](#the-harvester)
+  - [Més OSINT](#més-osint----infoga)
 
 - ## AUDITORIA DE SERVEIS
 
-  - Escaneig
-  - SSH
-  - Enumeració
+  - [Escaneig](#escanneig)
+  - [SSH](#ssh-audit)
+  - [Enumeració](#enumeració)
   
 - ## FUNCIONALITATS AFEGIDES
 
-  - Bot Telegram amb Python
-  - Crear un contenidor Docker
+  - [Bot Telegram amb Python](#bot-de-telegram)
+  - [Crear un contenidor Docker](#contenidor-docker)
 
 - ## PLA DE MILLORA
 
