@@ -66,7 +66,7 @@ Aquest document definirà els registres, prioritats i classificacions de les ini
 ## Eina API de Shodan:
 - Hem d’importar l’eina Shodan a l’escript per poder-la implementar al nostre projecte:
 
-![foto](../fotos/image1.jpg)
+![foto](../fotos/image1.png)
 
 - L’escript de shodan està format per una funció principal funcioshodan() 
 a la qual importem la nostra API de shodan, que hem aconseguit regsitrant-nos a la web prèviament:
