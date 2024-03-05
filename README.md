@@ -65,19 +65,19 @@ Aquest document definirà els registres, prioritats i classificacions de les ini
 # APLICACIÓ
 - La nostra aplicacioó funciona amb un client interactiu des del terminal, on es mostra un primer menú amb fins a 11 opcións i et demana a escollir una de les funcions possibles:
 
-![foto](/fotos/menu1)
+![foto](/fotos/menu1.png)
 
 La primera part de la funció principal, busca el datetime i el guarda en una variable per després formatar el nom del fitxer reusltat de l'escanneig i seguidament fa un print del _banner_ de la nostra aplicació:
 
-![foto](/fotos/menu2)
+![foto](/fotos/menu2.png)
 
 Després, l'aplicació obre el fitxer de resultats, li posa un petit titol i ja se'ns comença a fer print del menú amb totes les opcions:
 
-![foto](/fotos/menu3)
+![foto](/fotos/menu3.png)
 
 La següent part del codi, es un _if else_ que crida cada eina o funció depenant de la opció que l'usuari ha escollit i ja passara a l'execució del programa: 
 
-![foto](/fotos/menu4)
+![foto](/fotos/menu4.png)
 
 
 ---
