@@ -388,3 +388,28 @@ Creem el directori de treball de docker, copiem el contingut dintre el docer gen
 Indiquem les ordres a executar per crear el docker:
 
 ![foto](/fotos/image63.png)
+
+---
+
+# LANDING PAGE
+
+![foto](/fotos/landin1.png)
+
+
+
+![foto](/fotos/landin2.png)
+
+
+![foto](/fotos/landin3.png)
+
+
+![foto](/fotos/landin4.png)
+
+
+![foto](/fotos/landin5.png)
+
+
+![foto](/fotos/landin6.png)
+
+
+![foto](/fotos/landin7.png)
