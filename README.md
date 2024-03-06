@@ -383,8 +383,8 @@ Dintre, aquest, ens descarguem python, les dependències d’aquest i snapd:
 
 Creem el directori de treball de docker, copiem el contingut dintre el docer generat i ens descarguem les dependències del projecte:
 
-![foto](../fotos/image62.png)
+![foto](/fotos/image62.png)
 
 Indiquem les ordres a executar per crear el docker:
 
-![foto](../fotos/image63.png)
+![foto](/fotos/image63.png)
