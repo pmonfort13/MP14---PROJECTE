@@ -393,6 +393,11 @@ Indiquem les ordres a executar per crear el docker:
 
 # LANDING PAGE
 
+Per fer la landing page hem utilitzat la web de Wix, que ofereix un servei de creació i hosting de webs gratuït amb el qual per començar com a petita empresa ens va molt bé i té un gran nombre d'eines diferents i de possibilitats
+
+
+- Pàgina d'inici:
+
 ![foto](/fotos/landin1.png)
 
 
